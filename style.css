@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #webbyoly {
+    position: relative;
+    overflow-x: hidden;
+    background-color: var(--secondary-background);
+  }
+  
+  .canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  #canvas-noise {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  nav {
+    z-index: 999;
+  }
+  
+  .sidebar {
+    height: 80vh;
+    width: 28vw;
+    position: fixed;
+    top: -50%;
+    right: -50%;
+    background: linear-gradient(#00000075, #5d61645b);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    flex-shrink: 0;
+    z-index: 9999;
+  }
+  
+  .btn-close-menu {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #section1 {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #e59d3b;
+  }
+  
+  .section1--wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+  }
+  
+  .section1--wrapper .showreelContainer {
+    height: 90%;
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section1--wrapper .showreelContainer .cod--reel {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    scale: 1.1;
+    background-size: cover;
+  }
+  
+  #section2 {
+    z-index: 9;
+    height: 55vh;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section2-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vw;
+    color: var(--primary-color);
+    width: 2600px;
+    animation-name: infiniteScroll;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes infiniteScroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .section2-wrapper .horizontal-scrolling-items__item {
+    font-family: Hit-Bold;
+    font-weight: 900;
+    white-space: nowrap;
+    background-image: url("./assets/img/CerberusBtnAnim.gif");
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 120px;
+    text-align: center;
+    font-weight: 800;
+    -webkit-font-smoothing: antialiased;
+    background-size: fill;
+    background-repeat: repeat; 
+  }
+  
+  #section3 {
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+  
+  .section3-wrapper {
+    width: 100%;
+    padding: 1vw;
+  }
+  
+  .highlight-sect-title-con {
+    padding: 0.5vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(1px);
+  }
+  
+  .highlight-sect-title-con h1 {
+    font-size: 6vw;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-family: Hit-Cond;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+  
+  .section3-data-wrapper {
+    margin-top: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vw;
+  }
+  
+  #logue-container-1 {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 2vw;
+  }
+  
+  #logue-container-2 {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-left: 10vw;
+    width: 100%;
+    gap: 2vw;
+  }
+  
+  #logue-container-3 {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 2vw;
+  }
+  
+  .card--body {
+    cursor: grabbing;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .svg-banner-image {
+    scale: 1.15;
+    transition: all 0.3s;
+  }
+  
+  .card-1-text {
+    width: 50%;
+    margin-top: 3vw;
+  }
+  
+  .t--each-spn {
+    font-weight: 600;
+    font-family: Hit-Cond;
+    font-size: 1.5vw;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+  }
+  
+  .t--each-para {
+    width: 80%;
+    margin-bottom: 1vw;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    font-size: 1.2vw;
+    font-family: Hit-Cond;
+    font-weight: 100;
+  }
+  
+  .cta-btn {
+    border-radius: 10px;
+    padding: 1vw 3vw;
+    &:hover {
+      background-image: url(./assets/img/CerberusBtnAnim.gif);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  
+  #section4 {
+    min-height: 50vh;
+    width: 100vw;
+    position: relative;
+  }
+  
+  .section4-wrapper {
+    width: 100%;
+    padding: 6vw 2.3vw 4vw 2.3vw;
+  }
+  
+  .sub-text {
+    font-family: Hit-Cond;
+    font-size: 2.5vw;
+    color: #ffffff43;
+    text-align: justify;
+    line-height: 3.5vw;
+  }
+  
+  .sub-text span {
+    font-family: Hit-COnd;
+  }
+  
+  #section5 {
+    position: relative;
+    min-height: 110vh;
+    width: 100vw;
+  }
+  
+  .section5-wrapper {
+    width: 100%;
+    padding: 2vw 0;
+  }
+  
+  .s5-title-con {
+    padding: 0.5vw 0 2.5vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(1px);
+  }
+  
+  .s5-title-con h1 {
+    font-size: 6vw;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-family: Hit-Cond;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+  
+  #section6 {
+    height: 120vh;
+    width: 100vw;
+    position: relative;
+  }
+  
+  .section6-wrapper {
+    width: 100%;
+    padding: 1vw;
+    margin-top: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4vw;
+  }
+  
+  .s6-title-con {
+    padding: 0.5vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(1px);
+  }
+  
+  .s6-title-con h1 {
+    font-size: 6vw;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-family: Hit-Cond;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+  
+  #glass-container {
+    width: 60vw;
+    height: 75vh;
+    overflow: hidden;
+    padding: 1vw;
+    background-image: url("./assets/img/CERBERUS_KA.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+      inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  }
+  
+  .g-con-glass-con {
+    height: 100%;
+    width: 100%;
+    background-color: #00000000;
+    backdrop-filter: blur(60px);
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+    align-items: center;
+  }
+  
+  .g-con-glass-con span {
+    font-size: 2.8vw;
+    font-family: Hit-Cond;
+    text-align: center;
+  }
+  
+  .fromer-btn-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .pre-btn {
+    padding: 1vw 3vw;
+    border-radius: 8px;
+    border: 1px solid var(--primary-background);
+    font-family: Hit-Cond;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff43;
+    backdrop-filter: blur(30px);
+    letter-spacing: 1px;
+    &:active {
+      scale: 0.9;
+    }
+  }
+  
+  .bottom-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw 0 3vw 0;
+  }
+  
+  .bottom-ornament span {
+    font-size: 2rem;
+    font-family: Hit-Cond;
+    color: var(--primary-color);
+    font-weight: 100;
+  }
+  
+  #footer {
+    position: relative;
+    z-index: 2;
+    height: 50vh;
+    width: 100vw;
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .ft-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  #footer a img {
+    scale: 1.6;
+  }
+  
+  .middle-ft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .mdft-lft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 4vw;
+  }
+  
+  .mdft-lft a {
+    width: fit-content;
+    padding: 0 0.5vw;
+    font-size: 1em;
+    font-family: Hit-Cond;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: #ffffff75;
+  }
+  
+  .sprtr-ft {
+    height: 2.2vw;
+    width: 2.5px;
+    border-radius: 100px;
+    background-color: #ffffff43;
+  }
+  
+  .bottom-ft {
+    width: 100%;
+    position: relative;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bottom-ft :nth-child(1) {
+    width: fit-content;
+    padding: 0 0.5vw;
+    font-size: 1em;
+    font-family: Hit-Cond;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: #ffffff75;
+  }
+  
+  .bottom-ft :nth-child(2) {
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 0 0.5vw;
+    font-size: 1em;
+    font-family: Hit-Cond;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: #ffffff75;
+  }
+  
